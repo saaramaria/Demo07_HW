@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="T3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid BorderBrush="#FFE6E6E6" BorderThickness="10" Padding="0" Background="White">
+        <Rectangle Fill="#FFE6E6E6" Height="100" VerticalAlignment="Top"/>
+        <TextBlock x:Name="otsikko" HorizontalAlignment="Center" Margin="0,20,0,0" TextWrapping="Wrap" Text="Oy K-S Windows Ab" VerticalAlignment="Top" FontSize="48"/>
+        
+        <RelativePanel HorizontalAlignment="Center">
+            <TextBlock x:Name="ikkunanLeveysTeksti" HorizontalAlignment="Left" Margin="0,187,0,0" TextWrapping="Wrap" Text="Ikkunan leveys (mm):" VerticalAlignment="Top"/>
+            <TextBox x:Name="ikkunanLeveys" HorizontalAlignment="Left" Margin="60,175,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="163" RelativePanel.RightOf="ikkunanLeveysTeksti"/>
+
+            <TextBlock x:Name="ikkunanKorkeusTeksti" HorizontalAlignment="Left" Margin="0,244,0,0" TextWrapping="Wrap" Text="Ikkunan korkeus (mm):" VerticalAlignment="Top"/>
+            <TextBox x:Name="ikkunanKorkeus" HorizontalAlignment="Left" Margin="49,232,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="163" RelativePanel.RightOf="ikkunanKorkeusTeksti"/>
+
+            <TextBlock x:Name="karminLeveysTeksti" HorizontalAlignment="Left" Margin="0,299,0,0" TextWrapping="Wrap" Text="Karmipuun leveys (mm):" VerticalAlignment="Top"/>
+            <TextBox x:Name="karminLeveys" HorizontalAlignment="Left" Margin="40,287,0,0" TextWrapping="Wrap" Text="45" VerticalAlignment="Top" Width="163" RelativePanel.RightOf="karminLeveysTeksti"/>
+
+            <TextBlock x:Name="ikkunanPaTeksti" HorizontalAlignment="Left" Margin="0,430,0,0" TextWrapping="Wrap" Text="Ikkunan pinta-ala:" VerticalAlignment="Top"/>
+            <TextBox x:Name="ikkunanPa" HorizontalAlignment="Left" Margin="81,418,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163" PlaceholderText="cm^2" RelativePanel.RightOf="ikkunanPaTeksti"/>
+
+            <TextBlock x:Name="lasinPaTeksti" HorizontalAlignment="Left" Margin="0,484,0,0" TextWrapping="Wrap" Text="Lasin pinta-ala:" VerticalAlignment="Top"/>
+            <TextBox x:Name="lasinPa" HorizontalAlignment="Left" Margin="99,472,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163" PlaceholderText="cm^2" RelativePanel.RightOf="lasinPaTeksti"/>
+
+            <TextBlock x:Name="karminPiiriTeksti" HorizontalAlignment="Left" Margin="0,538,0,0" TextWrapping="Wrap" Text="Karmin piiri:" VerticalAlignment="Top"/>
+            <TextBox x:Name="karminPiiri" HorizontalAlignment="Left" Margin="120,526,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163" PlaceholderText="cm" RelativePanel.RightOf="karminPiiriTeksti"/>
+        </RelativePanel>
+
+        <Button x:Name="laskeButton" Content="Laske" HorizontalAlignment="Center" Margin="0,354,0,0" VerticalAlignment="Top" Width="86" Height="30" Click="laskeButton_Click" Background="#33D14141" Foreground="Black"/>
+    </Grid>
+</Page>
